@@ -1,0 +1,212 @@
+
+/* Styling for header layout */
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 8px 6px -8px rgb(175, 173, 173);
+}
+
+/* Styling for logo */
+.logoHeader {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Searchbar styling */
+.searchbar[type=text] {
+    /* border-bottom: 1px solid #ccc; */
+    border: 1px solid gray;
+    border-radius: 0.4rem;
+    font-size: 16px;
+    background-color: none;
+    background-image: url("./images/magnifier.png");
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.searchbar[type=text]:focus {
+    background-image: none;
+    text-align: center;
+    padding-right: 35px;
+    transform: scale(1.03);
+}
+
+.searchbar:focus::placeholder{
+    color: transparent;
+}
+
+/* Navbar links styling */
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navLinks li {
+    list-style-type: none;
+}
+
+.navLinks li a {
+    text-decoration: none;
+}
+
+.navLinks li a i {
+    font-size: 2rem;
+    color: #2c3e50;
+    transition: all 0.2s ease-in-out;
+}
+
+.navLinks li a img {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.navLinks li a i:hover {
+    color: #476583;
+    transform: scale(1.09);
+}
+
+.navLinks li a img:hover {
+    transform: scale(1.09);
+}
+
+/* Styling for hamburger menu */
+.toggleBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.bar {
+    width: 30px;
+    height: 6px;
+    border-radius: 4rem;
+    background: #2c3e50;
+}
+
+
+/* Css animation */
+/* Animation for logo */
+.logoHeader {
+    animation: fadeFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+/* Animation for searchbar */
+.searchbar {
+    animation: fadeDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+/* Animation for nav links */
+.navLinks {
+    animation: fadeFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+
+/* Media queries */
+
+/* Meida queries for hamburger menu (1000px)*/
+@media (max-width: 1000px) {
+    .toggleBtn {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logoContainer {
+        display: none;
+    }
+
+    .searchbarContainer {
+        display: none;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .logoContainer.active {
+        display: flex;
+        padding-left: 1.2rem;
+    }
+
+    .searchbarContainer.active {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navLinks.active {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .logoContainer.active {
+        padding-bottom: 1.2rem;
+    }
+    .logoHeader {
+        width: 10rem;
+    }
+}
