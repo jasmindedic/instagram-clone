@@ -12,18 +12,40 @@ body {
 /* Style for general layout of content */
 .content {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .mainContent {
     display: flex;
     flex-direction: column;
+    animation: fadeLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.sidebar {
+    margin-top: 4rem;
+    padding-right: 85px;
+}
+
+/* Css animation for maincontent */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 /* Styling for top profile bar */
 .topProfileBar {
     margin-top: 4rem;
     display: flex;
+    justify-content: space-evenly;
     border: 2px solid #bdc3c7;
     padding-left: 4rem;
     padding-right: 4rem;
@@ -42,15 +64,237 @@ body {
 }
 
 .profileImg {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 100%;
     border: 2px solid gray;
     padding: 0.1rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    object-fit: cover;
 }
 
 .profileImg:hover {
     transform: scale(1.08);
 }
+
+/* Styling for posts */
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.post {
+    border: 2px solid #bdc3c7;
+    border-radius: 0.8rem;
+}
+
+.profileRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.profileRow .fa-ellipsis {
+    font-size: 2rem;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.location {
+    font-style: italic;
+}
+
+.imagePost {
+    width: 50rem;
+}
+
+.threeBtnContainer {
+    display: flex;
+    gap: 1rem;
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.threeBtn {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.threeBtn:hover {
+    color: #5d7286;
+}
+
+.likesAmount {
+    padding-left: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.commentArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.commentArea input {
+    width: 18rem;
+    height: 2.8rem;
+    border-radius: 0.8rem;
+}
+
+.commentArea input {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.commentArea input::placeholder {
+    text-align: center;
+}
+
+.commentArea input:focus {
+    outline: #2c3e50;
+    transform: scale(1.03);
+}
+
+.fa-face-smile {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-face-smile:hover {
+    color: #5d7286;
+    cursor: pointer;
+}
+
+.postBtn {
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: #2c3e50;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.postBtn:hover {
+    background-color: #5d7286;
+    transform: scale(1.02);
+}
+
+
+/* Styling for sidebar */
+.followExample {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1re;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.followExample p {
+    font-size: 1.1rem;
+}
+
+.follow {
+    color: rgb(13, 13, 155);
+    font-weight: 600;
+    position: absolute;
+    right: -85px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.follow:hover {
+    color: #728191;
+}
+
+.sidebarHeadliner h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #2c3e50;
+}
+
+
+
+
+/* Media queries */
+@media (min-width: 1750px) {
+    .content {
+        justify-content: center;
+        gap: 6rem;
+    }
+}
+
+@media (max-width: 1330px) {
+    .sidebar {
+       display: none;
+    }
+}
+
+@media (max-width: 920px) {
+    
+    .topProfileBar {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .topProfileContainer {
+        padding-right: 1.4rem;
+        padding-left: 1.4rem;
+    }
+
+    .topBarImg {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .imagePost {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 730px) {
+    
+    .topProfileBar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .topProfileContainer {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .topBarImg {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .imagePost {
+        width: 30rem;
+    }
+}
+
+/* Media queries for mobile device */

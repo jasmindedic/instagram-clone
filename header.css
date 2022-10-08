@@ -65,6 +65,7 @@
     height: 2.8rem;
     border-radius: 100%;
     transition: all 0.2s ease-in-out;
+    object-fit: cover;
 }
 
 .navLinks li a i:hover {
