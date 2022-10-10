@@ -14,7 +14,7 @@ function createHeaderContent() {
         <img class="logoHeader" src="./images/logo.png">
     </div>
     <div class="searchbarContainer">
-        <input class="searchbar" type="text" placeholder="Search..">
+        <input class="searchbar" type="text" placeholder="Search.." onkeydown="searchUser()">
     </div>
     <div class="toggleBtn" onclick="hamburgerMenu()">
         <span class="bar"></span>

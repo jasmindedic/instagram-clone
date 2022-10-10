@@ -141,6 +141,10 @@ body {
     color: #5d7286;
 }
 
+.heart.active {
+    color: red;
+}
+
 .likesAmount {
     padding-left: 0.8rem;
     padding-bottom: 0.8rem;
@@ -229,12 +233,45 @@ body {
     color: #728191;
 }
 
+
 .sidebarHeadliner h3 {
     margin-bottom: 1rem;
     font-size: 1.6rem;
     color: #2c3e50;
 }
 
+
+/* Comment styling */
+.commentInnerContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 0.8rem;
+    padding-bottom: 0.2rem;
+}
+
+.commentCreator {
+    font-weight: 600;
+}
+
+.commentContainer {
+    padding-bottom: 0.8rem;
+}
+
+.fa-trash {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: #2c3e50;
+}
+
+.fa-trash:hover {
+    color: #5d7286;
+    transform: scale(1.01);
+}
+
+.d-none {
+    display: none;
+}
 
 
 /* Media queries */

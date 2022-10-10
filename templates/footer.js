@@ -15,10 +15,10 @@ function createFooterContent() {
             <img src="./images/logo.png">
             <div class="socialLinks">
                 <ul>
-                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://github.com/jasmindedic/instagram-clone" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=de" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://de-de.facebook.com/login.php/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -1,20 +1,59 @@
-// Create needed arrays
-let profileImages = [
-    "./images/profile-pic1.jpg",
-    "./images/profile-pic2.jpg",
-    "./images/profile-pic3.jpg",
-    "./images/profile-pic4.jpg",
-    "./images/profile-pic5.jpg"
+/* JSON arrays */
+let posts = [
+    {
+        "profileImage": "./images/profile-pic1.jpg",
+        "name": "Ben_Kaik",
+        "location": "London",
+        "image": "./images/image1.jpg",
+        "likes": 76,
+        'isLiked': false,
+        "comments": [],
+    },
+
+    {
+        "profileImage": "./images/profile-pic2.jpg",
+        "name": "Antonio_Quadio",
+        "location": "Berlin",
+        "image": "./images/image2.jpg",
+        "likes": 32,
+        'isLiked': false,
+        "comments": [],
+
+    },
+
+    {
+        "profileImage": "./images/profile-pic3.jpg",
+        "name": "Anne_marie",
+        "location": "Amsterdam",
+        "image": "./images/image3.jpg",
+        "likes": 93,
+        'isLiked': false,
+        "comments": [],
+
+    },
+
+    {
+        "profileImage": "./images/profile-pic4.jpg",
+        "name": "Franzi_19",
+        "location": "New York",
+        "image": "./images/image4.jpg",
+        "likes": 87,
+        'isLiked': false,
+        "comments": [],
+    },
+
+    {
+        "profileImage": "./images/profile-pic5.jpg",
+        "name": "Franzi_19",
+        "location": "Rom",
+        "image": "./images/image5.jpg",
+        "likes": 99,
+        'isLiked': false,
+        "comments": [],
+    }
 ];
 
-let names = [
-    "Ben_Kaik",
-    "Antonio_Quadio",
-    "Anne_marie",
-    "Franzi_19",
-    "Franzi_19"
-];
-
+/* Simple array specifically for sidebar section */
 let followerNames = [
     "Lisa_979",
     "Hansi_1001",
@@ -22,22 +61,3 @@ let followerNames = [
     "Marcus_An",
     "Herbert_1090"
 ];
-
-let locations = [
-    "London",
-    "Berlin",
-    "Amsterdam",
-    "New York",
-    "Rom"
-];
-
-let images = [
-    "./images/image1.jpg",
-    "./images/image2.jpg",
-    "./images/image3.jpg",
-    "./images/image4.jpg",
-    "./images/image5.jpg"
-];
-let likesAmount = [76, 32, 93, 87, 90];
-
-let comments = [];
